@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 4. Set environment variables
 export OPENAI_API_KEY=...     # or GEMINI_API_KEY=...
-# optional
+optional
 export AGENT_MODEL=gpt-4o-mini
 
 5. Run the agent
