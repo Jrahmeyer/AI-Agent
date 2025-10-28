@@ -101,3 +101,6 @@ API key for your chosen LLM provider
 
 # Disclaimer
 This is a research/toy tool. Review changes; do not run on sensitive codebases.
+
+# License
+MIT
