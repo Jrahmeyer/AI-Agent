@@ -73,18 +73,19 @@ git push -u origin agent/<short-task>
 ```
 
 # Configuration
-config.yaml: model, max tokens, tool allowlist, timeouts
-.agentignore: paths the agent must not touch
-prompts/: system and tool-specific prompts
+* config.yaml: model, max tokens, tool allowlist, timeouts
+
+* .agentignore: paths the agent must not touch
+* prompts/: system and tool-specific prompts
 # Extending
 Add a tool:
-Create tools/<name>.py with run(input) -> output
-Register in tools/__init__.py
-Allow via --tools <name> or config.yaml
+* Create tools/<name>.py with run(input) -> output
+* Register in tools/__init__.py
+* Allow via --tools <name> or config.yaml
 
 # Logs
-logs/session-*.jsonl with step-by-step traces
-reports/ for summaries and diffs
+* logs/session-*.jsonl with step-by-step traces
+* reports/ for summaries and diffs
 
 # Examples
 ```
