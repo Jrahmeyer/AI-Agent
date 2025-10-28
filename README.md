@@ -17,31 +17,44 @@ git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 ```
 
-3. Create and activate a virtualenv (recommended)
+2. Create and activate a virtualenv (recommended)
+```
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
+```
 
-4. Install dependencies
+3. Install dependencies
+```
 pip install -r requirements.txt
+```
 
-5. Set environment variables
+4. Set environment variables
+```
 export OPENAI_API_KEY=...     # or GEMINI_API_KEY=...
-optional
+# optional
 export AGENT_MODEL=gpt-4o-mini
+```
 
-6. Run the agent
+5. Run the agent
+```
 python -m agent.run --repo ./target_repo --task "Fix failing tests"
+```
 
 # Usage
 * Target a directory:
+```
 python -m agent.run --repo ./my_project --task "Refactor function X for readability"
+```
 
 * Dry run (no file writes):
+```
 python -m agent.run --repo ./my_project --task "Suggest fixes" --dry-run
+```
 
 * Limit tools (safer):
+```
 python -m agent.run --repo ./my_project --task "Run tests" --tools file,tests
-
+```
 See python -m agent.run --help for all flags.
 
 ## Safety
@@ -51,11 +64,13 @@ Scoped access to --repo path only
 Use at your own risk; review diffs before committing.
 
 # Git Workflow
+```
 git checkout -b agent/<short-task>
 python -m agent.run --repo ./target_repo --task "..."
 git add -A
 git commit -m "agent: <summary>"
 git push -u origin agent/<short-task>
+```
 
 # Configuration
 config.yaml: model, max tokens, tool allowlist, timeouts
@@ -72,11 +87,13 @@ logs/session-*.jsonl with step-by-step traces
 reports/ for summaries and diffs
 
 # Examples
-Fix tests
+```
+# Fix tests
 python -m agent.run --repo ./examples/flaky --task "Diagnose failing tests"
 
-Refactor module
+# Refactor module
 python -m agent.run --repo ./examples/pkg --task "Extract function and add docstrings" --dry-run
+```
 
 # Requirements
 Python 3.10+
