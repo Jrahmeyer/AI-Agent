@@ -12,22 +12,24 @@ An LLM-powered code agent that reads, edits, and runs code to propose fixes, ref
 
 # Quick Start
 1. Clone the repo
+```
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
+```
 
-2. Create and activate a virtualenv (recommended)
+3. Create and activate a virtualenv (recommended)
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
-3. Install dependencies
+4. Install dependencies
 pip install -r requirements.txt
 
-4. Set environment variables
+5. Set environment variables
 export OPENAI_API_KEY=...     # or GEMINI_API_KEY=...
 optional
 export AGENT_MODEL=gpt-4o-mini
 
-5. Run the agent
+6. Run the agent
 python -m agent.run --repo ./target_repo --task "Fix failing tests"
 
 # Usage
