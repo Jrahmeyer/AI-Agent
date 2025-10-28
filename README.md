@@ -1,4 +1,3 @@
-# AI-Agent
 # Agentic Debugging Tool (Python)
 
 An LLM-powered code agent that reads, edits, and runs code to propose fixes, refactors, and small features via safe tool-calling.
