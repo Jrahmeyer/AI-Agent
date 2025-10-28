@@ -74,7 +74,6 @@ git push -u origin agent/<short-task>
 
 # Configuration
 * config.yaml: model, max tokens, tool allowlist, timeouts
-
 * .agentignore: paths the agent must not touch
 * prompts/: system and tool-specific prompts
 # Extending
